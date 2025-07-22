@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "goodermincraft",
+	"version": "${version}",
+	"name": "GooderMincraft",
+	"description": "IDK",
+	"authors": [
+		"Hubosn"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/goodermincraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"gooder.modid.GooderMincraft"
+		],
+		"client": [
+			"gooder.modid.GooderMincraftClient"
+		],
+		"fabric-datagen": [
+			"gooder.modid.GooderMincraftDataGenerator"
+		],
+		"client":[
+			"gooder.modid.GooderMincraftClient"
+			]
+	},
+	"mixins": [
+		"goodermincraft.mixins.json",
+		{
+			"config": "goodermincraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
